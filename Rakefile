@@ -20,7 +20,7 @@ task publish: [:generate] do
 
     system 'git init'
     system 'git add .'
-    system 'git commit -m "#{Time.now.utc}"'
+    system "git commit -m '#{Time.now.utc}'"
     system 'git remote add origin git@github.com:stepankuzmin/stepankuzmin.github.io.git'
     system 'git push origin master --force'
 
