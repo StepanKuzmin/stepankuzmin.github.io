@@ -14,6 +14,7 @@ end
 task publish: [:generate] do
   Dir.mktmpdir do |tmp|
     cp_r '_site/.', tmp
+    cp_r 'CNAME', tmp
 
     pwd = Dir.pwd
     Dir.chdir tmp
