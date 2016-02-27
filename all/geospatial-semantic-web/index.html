@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Geospatial Semantic Web</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/tufte.css">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <style type="text/css">
+   img { mix-blend-mode: multiply; }
+  </style>
+
+  <!-- <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+
+  <link rel="canonical" href="http://stepankuzmin.ru/all/geospatial-semantic-web">
+  <link rel="alternate" type="application/rss+xml" title="Stepan Kuzmin" href="http://stepankuzmin.ru/feed.xml" />
+</head>
+  <body>
+    <header>
+  <nav>
+    <a href='/'>Home</a>
+  </nav>
+</header>
+    <article>
+      <h1>Geospatial Semantic Web</h1>
+<p class='subtitle'>February 20, 2012</p>
+
+<section>
+<p>В данной статье приводится краткое введение в проблему представления и обработки пространственных данных в семантической паутине, описываются существующие технологии и стандарты.</p>
+</section>
+
+<section>
+<h2 id="section">Введение</h2>
+
+<p>Стремительный рост Всемирной паутины привёл к пониманию того, что существующие методы поиска и обработки пространственной информации малоэффективны. Отчасти, это связанно с тем, что широко используемая в данный момент геореляционная модель представления данных накладывает определённые ограничения на обработку распределённой геоинформации. Недостатком геореляционной модели данных является неприспособленность реляционных таблиц для семантического анализа и полнотекстового поиска в распределённых базах пространственных данных<label for="sn-1" class="margin-toggle sidenote-number"></label>
+      <input type="checkbox" id="sn-1" class="margin-toggle" />
+      <span class="sidenote">Калантаев П.А. «Семантическая организация пространственных данных».</span>. Однако эти задачи довольно легко решаются с помощью использования модели пространственных данных, основанной на технологиях стандарта семантической паутины (Semantic Web). Появление семантической паутины предполагает качественное улучшение методов извлечения информации за счёт использования семантики данных в процессе поиска<label for="sn-2" class="margin-toggle sidenote-number"></label>
+      <input type="checkbox" id="sn-2" class="margin-toggle" />
+      <span class="sidenote">Jan Oliver Wallgrub, Mehul Bhatt «An Architecture for Semantic Analysis in Geospatial Dynamics».</span>. Такое развитие технологий требует особого подхода к организации пространственных данных — необходимо чтобы, семантика такого вида данных описывалась надлежащим образом<label for="sn-3" class="margin-toggle sidenote-number"></label>
+      <input type="checkbox" id="sn-3" class="margin-toggle" />
+      <span class="sidenote">John Hebeler, Matthew Fisher, Ryan Blace, Andrew Perez-Lopez «Semantic Web Programming».</span>.</p>
+</section>
+
+<section>
+<h2 id="section">Краткий обзор технологий и стандартов</h2>
+
+<p>На данный момент существует несколько, ещё не стандартизированных окончательно, технологий для описания и обработки пространственных данных в семантической паутине. Существует четыре способа представления семантики пространственных данных<label for="sn-4" class="margin-toggle sidenote-number"></label>
+      <input type="checkbox" id="sn-4" class="margin-toggle" />
+      <span class="sidenote">Egenhofer M.J. «Toward the semantic geospatial web».</span>:</p>
+
+<ul>
+  <li>
+    <p>Естественный язык с минимумом разметки. При этом поисковые системы могут обрабатывать только небольшие подмножества естественного языка (например, основные инструкции поиска) и поддерживают небольшой набор техник полнотекстовой индексации естественного языка.</p>
+  </li>
+  <li>
+    <p>Простые метаданные, в которых семантику описывает некоторый набор ключевых слов (например языки основанные на XML). Несмотря на то, что пользователям необходимо взаимодействовать с метаданными во время извлечения информации, семантика метаданных определяется документами или, например, поисковыми системами.</p>
+  </li>
+  <li>
+    <p>Модели представления данных. Самая популярная модель представления данных — Resource Description Framework (RDF). RDF представляет утверждения о ресурсах в виде, пригодном для машинной обработки. Концептуальная структура приводится в описании терминов сущностей, отношений и атрибутов. Семантика модели представления данных также определяется интерфейсами, документами и поисковыми системами.</p>
+  </li>
+  <li>
+    <p>Логическая семантика обеспечивает соответствие между терминами и объектами реального мира, позволяя производить автоматические рассуждения. Также как метаданные и модели представления данных, логическая семантика принципиально определяется интерфейсами, документами и поисковыми системами.</p>
+  </li>
+</ul>
+
+<p>Базовым инструментом описания семантики пространственной информации являются метаданные. В настоящее время существует ряд стандартов на метаданные электронных карт и геоинформации в международном и национальном масштабах, ведутся работы по дальнейшему развитию системы международных стандартов и их взаимодействию с национальными стандартами, в которых активное участие принимает и наша страна<label for="sn-5" class="margin-toggle sidenote-number"></label>
+      <input type="checkbox" id="sn-5" class="margin-toggle" />
+      <span class="sidenote">Лунева Н.В. «Инструменты текстового отображения семантики геопространственной информации».</span>.</p>
+
+<p>Прежде всего, необходимо описать онтологию для представления пространственных данных<label for="sn-6" class="margin-toggle sidenote-number"></label>
+      <input type="checkbox" id="sn-6" class="margin-toggle" />
+      <span class="sidenote">Yandong Wang, Jingjing Dai, Jizhen Sheng, Kai Zhou, Jianya Gong «Geo-ontology design and its logic reasoning».</span>. Работа над этим ведётся в рамках разработки основной онтологии и словаря OWL для представления пространственных свойств ресурсов Всемирной паутины. В рамках разработки этого стандарта было решено использовать синтаксис похожий на модель объектов в GeoRSS (например, описание прямоугольников, точек, линий, и полигонов). В стандарт также включается описание отношений пространственных объектов (идентичность, пересекаемость, непересекаемость и прочее). Подробнее об этом можно узнать из отчёта W3C Incubator Group от 23 октября 2007 года<label for="sn-7" class="margin-toggle sidenote-number"></label>
+      <input type="checkbox" id="sn-7" class="margin-toggle" />
+      <span class="sidenote">W3C Incubator Group Report 23 October 2007 <a href="">http://www.w3.org/2005/Incubator/geo/XGR-geo-20071023/</a></span>.</p>
+
+<p>GeoSPARQL — это расширение SPARQL, представляющее собой язык запросов к пространственным данным, представленным по модели RDF<label for="sn-8" class="margin-toggle sidenote-number"></label>
+      <input type="checkbox" id="sn-8" class="margin-toggle" />
+      <span class="sidenote">Robert Battle, Dave Kolas «Enabling the Geospatial Semantic Web with Parliament and GeoSPARQL».</span>. Создан на основе существующих стандартов W3C (RDF, OWL, SPARQL) и OGC (Simple Features, Spatial Relations). Расширяет точки доступа SPARQL (SPARQL-endpoints) возможностью манипулировать пространственными данными. Предоставляет основу для пространственных рассуждений (spatial reasoning). Цель стандарта OGC GeoSPARQL состоит в поддержке представления и обработки пространственных данных в семантической паутине. Стандарт определяет словарь представления пространственных данных в RDF и расширение SPARQL для обработки пространственных данных. Например, так выглядит GeoSPARQL запрос на выборку всех аэропортов расположенных вблизи Лондона:</p>
+
+<pre class="code">
+PREFIX co: &lt;http://www.geonames.org/countries/#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; 
+PREFIX geo: &lt;http://www.w3.org/2003/01/geo/wgs84_pos#&gt;
+SELECT ?link ?name ?lat ?lon
+WHERE  {  
+  ?link gs:within(51.139725 -0.895386 51.833232 0.645447) .  
+  ?link gn:name ?name .  
+  ?link gn:featureCode gn:S.AIRP .
+  ?link geo:lat ?lat .
+  ?link geo:long ?lon
+}
+</pre>
+
+<p>Этот запрос можно выполнить на сайте GeoSPARQL<label for="sn-9" class="margin-toggle sidenote-number"></label>
+      <input type="checkbox" id="sn-9" class="margin-toggle" />
+      <span class="sidenote"><a href="">http://geosparql.org/</a></span>, созданного и поддерживаемого компанией KONA на основе популярного фреймворка Apache Jena и собственной разработки<label for="sn-10" class="margin-toggle sidenote-number"></label>
+      <input type="checkbox" id="sn-10" class="margin-toggle" />
+      <span class="sidenote">Geospatial Reasoning for the Semantic Web <a href="">http://code.google.com/p/geospatialweb/</a></span>. Результат будет примерно таким:</p>
+
+<div class="table-wrapper">
+<table>
+  <thead>
+    <tr>
+      <th>link</th>
+      <th>name</th>
+      <th>lat</th>
+      <th>lon</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://sws.geonames.org/2647216/">http://sws.geonames.org/2647216/</a></td>
+      <td>“Heathrow”</td>
+      <td>“51.47”</td>
+      <td>“-0.45”</td>
+    </tr>
+    <tr>
+      <td><a href="http://sws.geonames.org/6691396/">http://sws.geonames.org/6691396/</a></td>
+      <td>“Heathrow Terminal 5”</td>
+      <td>“51.47”</td>
+      <td>“-0.45”</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+</section>
+
+<section>
+<h2 id="section">Заключение</h2>
+
+<p>Исследования в области Geospatial Semantic Web нацелены на повышение эффективности и точности обработки пространственных данных в сети. Представление пространственных данных в сети, реализованное на основе методов и стандартов Semantic Web, таких, как GeoRSS и GeoRDF, позволяет описывать данные на языке, приближенном к естественному. Такая модель хорошо представляет разнородные пространственные данные и обеспечивает значительно большую скорость выполнения транзакций. Технология Geospatial Semantic Web предоставляет возможность создания логически объединённых децентрализованных пространственных баз данных и позволяет осуществлять более эффективный поиск требуемой пространственной информации.</p>
+</section>
+
+    </article>
+  </body>
+</html>
